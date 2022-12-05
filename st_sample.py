@@ -66,8 +66,8 @@ def main():
         wisata = pilihan.iloc[0,8]
         linsos = pilihan.iloc[0,10] 
         totalbelanja = pilihan.iloc[0,11]
-        ipm = pilihan.iloc[0,13]
-        pdrb = pilihan.iloc[0,20]
+        pdrb = pilihan.iloc[0,13]
+        ipm = pilihan.iloc[0,20]
 
         # Create the model
         prob = LpProblem(name="IPEI_LP_Problem",sense=1)
@@ -103,7 +103,7 @@ def main():
         prob += (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 <= totalbelanja, "total_constraint")
             
         # Add the objective function to the model
-        prob += 0.0000000000000118*x1 + 0.0000000000000158*x2 - 0.0000000000000115*x3 + 0.0000000000000145*x4 - 0.0000000000000348*x5 - 0.0000000000000269*x6 -0.0000000000000229*x7 - 0.00000000000000477*x8 + 0.0000000000000110*x9 +0.0787967*ipm+ 0.000000000502*pdrb - 0.173271
+        prob += 0.000000000000118*x1 + 0.000000000000158*x2 - 0.000000000000115*x3 + 0.000000000000145*x4 - 0.000000000000348*x5 - 0.000000000000269*x6 -0.000000000000229*x7 - 0.0000000000000477*x8 + 0.000000000000110*x9 +0.0787967*ipm+ 0.000000000502*pdrb - 0.173271
         # Solve the problem
         st.write(" Berapa Alokasi Belanja Fungsi yang diusulkan?")
         
@@ -120,7 +120,7 @@ def main():
                 st.write(f"Alokasi Lingkungan Hidup: {pulp.value(x7):20,.02f} ")
                 st.write(f"Alokasi Perumahan: {pulp.value(x8):20,.02f} ")
                 st.write(f"Alokasi Ekonomi: {pulp.value(x9):20,.02f} ")
-                st.write(f"Prediksi IPEI : {0.0000000000000118*pulp.value(x1) + 0.0000000000000158*pulp.value(x2) - 0.0000000000000115*pulp.value(x3) + 0.0000000000000145*pulp.value(x4) - 0.0000000000000348*pulp.value(x5) - 0.0000000000000269*pulp.value(x6) -0.0000000000000229*pulp.value(x7)- 0.00000000000000477*pulp.value(x8) + 0.0000000000000110*pulp.value(x9) +0.0787967*ipm+ 0.000000000502*pdrb - 0.173271:20,.02f}" )
+                st.write(f"Prediksi IPEI : {0.000000000000118*pulp.value(x1) + 0.000000000000158*pulp.value(x2) - 0.000000000000115*pulp.value(x3) + 0.000000000000145*pulp.value(x4) - 0.000000000000348*pulp.value(x5) - 0.000000000000269*pulp.value(x6) -0.000000000000229*pulp.value(x7)- 0.0000000000000477*pulp.value(x8) + 0.000000000000110*pulp.value(x9) +0.0787967*ipm+ 0.000000000502*pdrb - 0.173271:20,.02f}" )
         
         
 if __name__=='__main__':
