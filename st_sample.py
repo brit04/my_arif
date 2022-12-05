@@ -120,7 +120,7 @@ def main():
                 st.write(f"Alokasi Lingkungan Hidup: {pulp.value(x7):20,.02f} ")
                 st.write(f"Alokasi Perumahan: {pulp.value(x8):20,.02f} ")
                 st.write(f"Alokasi Ekonomi: {pulp.value(x9):20,.02f} ")
-                st.write(f"Prediksi IPEI : {0.000000000000118*pulp.value(x1) + 0.000000000000158*pulp.value(x2) - 0.000000000000115*pulp.value(x3) + 0.000000000000145*pulp.value(x4) - 0.000000000000348*pulp.value(x5) - 0.000000000000269*pulp.value(x6) -0.000000000000229*pulp.value(x7)- 0.0000000000000477*pulp.value(x8) + 0.000000000000110*pulp.value(x9) +0.0787967*ipm+ 0.000000000502*pdrb - 0.173271:20,.02f}" )
+                st.write(f"Prediksi IPEI : {0.000000000000118*pulp.value(x1) + 0.000000000000158*pulp.value(x2) - 0.000000000000115*pulp.value(x3) + 0.000000000000145*pulp.value(x4) - 0.000000000000348*pulp.value(x5) - 0.000000000000269*pulp.value(x6) -0.000000000000229*pulp.value(x7)- 0.0000000000000477*pulp.value(x8) + 0.000000000000110*pulp.value(x9) +0.0787967*ipm+ 0.000000000502*pdrb - 0.173271}" )
         
         
 if __name__=='__main__':
