@@ -34,7 +34,7 @@ def main():
     pilihan = df[(df["Pemda"] == pemda) & (df["Tahun"]==tahun)]
 
     col1, col2 = st.columns(2)
-    pilihan.colums()
+    
     
     with col1:
         st.write(f"Nilai Alokasi Belanja Fungsi {pemda} Tahun {tahun}")
@@ -54,7 +54,7 @@ def main():
         st.write(f"PDRB : {pilihan.iloc[0,13]:20,.02f} ")
         st.write(f"IPM : {pilihan.iloc[0,20]:.02f} ")
         
-        st.write
+        st.write(f"IPEI : {pilihan.iloc[0,24]:.02f} ")
 
 
     with col2:
