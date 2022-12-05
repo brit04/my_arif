@@ -106,7 +106,7 @@ def main():
         
         if st.button("Klik untuk menghitung!"):
                 status = prob.solve()
-                st.balloons()
+                
                 #
                 st.write(f"Alokasi Pendidikan: {pulp.value(x1):20,.02f} ")
                 st.write(f"Alokasi Kesehatan: {pulp.value(x2):20,.02f} ")
