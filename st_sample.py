@@ -61,7 +61,7 @@ def main():
         #Nilai ambil dari nilai realisasi pemda sesuai filter
         didik = pilihan.iloc[0,9]
         sehat = pilihan.iloc[0,7]
-        pelayanan = pilihan.iloc[0,1]
+        pelayanan = pilihan.iloc[0,2]
         tertib = pilihan.iloc[0,3]
         eko = pilihan.iloc[0,4]
         lh = pilihan.iloc[0,5]
