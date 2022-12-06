@@ -109,7 +109,7 @@ def main():
         prob += (x9 >= 0.95*eko,"eko_bawah_constraint")
         prob += (x9 <= 1.1*eko,"eko_atas_constraint")
         #Total belanja 9 fungsi tidak boleh lebih dari total belanja
-        prob += (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 = totalbelanja, "total_constraint")
+        prob += (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 <= totalbelanja, "total_constraint")
         
             
         # Add the objective function to the model
