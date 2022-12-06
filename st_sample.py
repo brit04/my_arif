@@ -104,8 +104,8 @@ def main():
         prob += (x6 <= 1.1*linsos,"linsos_atas_constraint")
         prob += (x7 >= 0.95*lh,"lh_bawah_constraint")
         prob += (x7 <= 1.1*lh,"lh_atas_constraint")
-        prob += (x3 >= 0.95*,"pelayanan_bawah_constraint")
-        prob += (x3 <= 1.1*perum,"perum_atas_constraint")
+        prob += (x8 >= 0.95*perum,"perum_bawah_constraint")
+        prob += (x8 <= 1.1*perum,"perum_atas_constraint")
         prob += (x9 >= 0.95*eko,"eko_bawah_constraint")
         prob += (x9 <= 1.1*eko,"eko_atas_constraint")
         #Total belanja 9 fungsi tidak boleh lebih dari total belanja
