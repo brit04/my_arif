@@ -25,7 +25,7 @@ def main():
     st.sidebar.title("Pengaturan Constraints")
     p = st.sidebar.number_input(label="Fungsi Pendidikan (dalam %)",value=20,min_value=20, max_value=100, step=1)
     k= st.sidebar.number_input(label="Fungsi Kesehatan (dalam %)",value=10,min_value=10, max_value=100, step=1)
-    l = st.sidebar.number_input(label="Fungsi Perumahan dan Fasilitas Umum (dalam %)",value=25,min_value=1, max_value=100, step=1)
+    #l = st.sidebar.number_input(label="Fungsi Perumahan dan Fasilitas Umum (dalam %)",value=25,min_value=1, max_value=100, step=1)
         
     df = pd.read_excel('data_sumber.xlsx')
     pemda = st.selectbox('Pilih Pemerintah Daerah', df['Pemda'].unique())
@@ -88,7 +88,7 @@ def main():
         # Add the constraints to the model
         prob += (x1 >= p*totalbelanja/100, "pendidikan_constraint")
         prob += (x2 >= k*totalbelanja/100, "kesehatan_constraint")
-        prob += (x8 >= l*totalbelanja/100, "perumahan_constraint")
+        #prob += (x8 >= l*totalbelanja/100, "perumahan_constraint")
         # Tidak boleh turun lebih dari 5% dan naik lebih dari 10% 
         prob += (x1 >= 0.95*didik,"pendidikan_bawah_constraint")
         prob += (x1 <= 1.1*didik,"pendidikan_atas_constraint")
