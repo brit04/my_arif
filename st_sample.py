@@ -37,7 +37,7 @@ def main():
     
     
     with col1:
-        st.write(f"Nilai Alokasi Belanja Fungsi {pemda} Tahun {tahun}")
+        st.write(f"Nilai Realisasi Belanja Fungsi {pemda} Tahun {tahun}")
         st.write("")
         st.write("")
         st.write("")
