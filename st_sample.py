@@ -26,7 +26,7 @@ def main():
     p = st.sidebar.number_input(label="Fungsi Pendidikan (dalam %)",value=20,min_value=20, max_value=100, step=1)
     k= st.sidebar.number_input(label="Fungsi Kesehatan (dalam %)",value=10,min_value=10, max_value=100, step=1)
     l = st.sidebar.number_input(label="Fungsi Pelayanan Umum (dalam %)",value=25,min_value=1, max_value=100, step=1)
-    ipei= st.sidebar.number_input(label="IPEI Target",value=7.0,min_value=0, max_value=10, step=0.1)
+    ipei= st.sidebar.number_input(label="IPEI Target",value=7,min_value=0, max_value=10, step=1)
         
     df = pd.read_excel('data_sumber.xlsx')
     pemda = st.selectbox('Pilih Pemerintah Daerah', df['Pemda'].unique())
