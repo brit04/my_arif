@@ -26,7 +26,7 @@ def main():
     p = st.sidebar.number_input(label="Fungsi Pendidikan (dalam %)",value=20,min_value=20, max_value=100, step=1)
     k= st.sidebar.number_input(label="Fungsi Kesehatan (dalam %)",value=10,min_value=10, max_value=100, step=1)
     l = st.sidebar.number_input(label="Fungsi Pelayanan Umum (dalam %)",value=25,min_value=1, max_value=100, step=1)
-    ipei= st.sidebar.number_input(label="IPEI Target",value=7,min_value=0, max_value=10, step=1)
+    #ipei= st.sidebar.number_input(label="IPEI Target",value=7,min_value=0, max_value=10, step=1)
         
     df = pd.read_excel('data_sumber.xlsx')
     pemda = st.selectbox('Pilih Pemerintah Daerah', df['Pemda'].unique())
@@ -111,7 +111,7 @@ def main():
         prob += (x9 <= 1.1*eko,"eko_atas_constraint")
         #Total belanja 9 fungsi tidak boleh lebih dari total belanja
         prob += (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 <= totalbelanja, "total_constraint")
-        prob += (0.000000000000118*x1 + 0.000000000000158*x2 - 0.000000000000115*x3 + 0.000000000000145*x4 - 0.000000000000348*x5 - 0.000000000000269*x6 -0.000000000000229*x7 - 0.0000000000000477*x8 + 0.000000000000110*x9 +0.0787967*ipm+ 0.000000000502*pdrb - 0.173271 >=ipei , "IPEI_constraint")
+        prob += (0.000000000000118*x1 + 0.000000000000158*x2 - 0.000000000000115*x3 + 0.000000000000145*x4 - 0.000000000000348*x5 - 0.000000000000269*x6 -0.000000000000229*x7 - 0.0000000000000477*x8 + 0.000000000000110*x9 +0.0787967*ipm+ 0.000000000502*pdrb - 0.173271 >=6.7 , "IPEI_constraint")
         
         
             
