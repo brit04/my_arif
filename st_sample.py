@@ -89,7 +89,7 @@ def main():
         # Add the constraints to the model
         prob += (x1 >= p*totalbelanja/100, "pendidikan_constraint")
         prob += (x2 >= k*totalbelanja/100, "kesehatan_constraint")
-        prob += (x3 >= l*totalbelanja/100, "pelayanan_constraint")
+        #prob += (x3 >= l*totalbelanja/100, "pelayanan_constraint")
         # Tidak boleh turun lebih dari 5% dan naik lebih dari 10% 
         #prob += (x1 >= 0.95*didik,"pendidikan_bawah_constraint")
         #prob += (x1 <= 1.1*didik,"pendidikan_atas_constraint")
